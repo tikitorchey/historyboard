@@ -1,4 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React    from "react";
+import ReactDOM from "react-dom/client";
+import App      from "./Components/App";
 
-ReactDOM.render(<h1>Hello World!</h1>, document.getElementById('app'));
+const domNode = document.getElementById('app');
+if(domNode){
+  const root = ReactDOM.createRoot(domNode);
+  root.render(<App />);
+}else{
+  console.log("Failed to get element by ID `app`.")
+};

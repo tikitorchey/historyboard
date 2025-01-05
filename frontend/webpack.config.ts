@@ -13,18 +13,18 @@ declare module "webpack" {
 }
 
 const config: Configuration = {
-    context: path.join(__dirname, 'src'),
-    entry: './index.tsx',
-    output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/assets',
+    context : path.join(__dirname, 'src'),
+    entry   : './index.tsx',
+    output  : {
+        path        : path.join(__dirname, 'dist'),
+        filename    : 'bundle.js',
+        publicPath  : '/dist',
     },
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
+                test    : /\.tsx?$/,
+                use     : 'ts-loader',
             },
         ],
     },
@@ -34,10 +34,9 @@ const config: Configuration = {
     },
     devtool: "inline-source-map",
     devServer: {
-        // contentBase: path.join(__dirname, 'static'),
-        static: { directory: path.join(__dirname, "static") },
-        open: true,
-        port: 3000,
+        static  : { directory: path.join(__dirname, "static") },
+        open    : true,
+        port    : 3000,
     },
 };
 

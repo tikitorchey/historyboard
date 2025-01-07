@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom'
+import { HashRouter, Route, Link, Routes } from 'react-router-dom'
 import Grid from '@mui/material/Grid2';
 import { ContactPage } from './Pages/ContactPage'
 import { ProjectPage } from './Pages/ProjectPage'
@@ -9,7 +9,7 @@ const App : React.FunctionComponent = () => {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
 
         { /** ナビゲーシション（Drawer） */ }
         <div className = 'Navigation'>
@@ -48,8 +48,7 @@ const App : React.FunctionComponent = () => {
           </Routes>
         </div>
 
-      </BrowserRouter>
-
+      </HashRouter>
     </div>
   );
 };

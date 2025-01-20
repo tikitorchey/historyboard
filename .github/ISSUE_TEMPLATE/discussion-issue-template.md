@@ -1,5 +1,5 @@
 ---
-name: " Discussion issue template"
+name: Discussion issue template
 about: Make project decisions
 title: "[DISC]"
 labels: ''
